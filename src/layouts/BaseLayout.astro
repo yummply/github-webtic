@@ -1,0 +1,35 @@
+---
+// src/layouts/BaseLayout.astro
+const {title} = Astro.props;
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{{title}}</title>
+		<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/base.scss')} />
+		<style>
+			/* scoped CSS styles go here: */
+			/* h1 { ... } */
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="logo">
+				<a href="/">[logo]</a>
+			</div>
+			<div class="menu">
+				<ul>
+					<li>M1</li>
+					<li>M2</li>
+					<li>
+						<a href="/about">About</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<slot />
+	</body>
+</html>
