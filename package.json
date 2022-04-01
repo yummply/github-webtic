@@ -9,6 +9,9 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.22.11"
+    "astro": "^0.24.3"
+  },
+  "dependencies": {
+    "airtable": "^0.11.2"
   }
 }
